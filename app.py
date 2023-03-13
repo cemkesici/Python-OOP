@@ -1,9 +1,10 @@
-class pizza:
-    def __init__(self):
-        self.fiyat = 0
+class pizza():
+    def __init__(self,fiyat,isim):
+        self.fiyat = fiyat
+        self.isim=isim
     def start(self):
         print("Pizza is starting")         
-class sos:
+class sos():
     def __init__(self):
         pass
     def start(self):
