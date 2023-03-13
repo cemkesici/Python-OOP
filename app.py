@@ -1,51 +1,58 @@
 class pizza():
-    def __init__(self,Pizzafiyat,isim):
+    def __init__(self,Pizzafiyat,Pizzaisim):
         self.Pizzafiyat = int(Pizzafiyat)
-        self.isim=isim
+        self.Pizzaisim=Pizzaisim
     def Pizzafiyatcheck(self):
-        print("Pizza Fiyat : "+self.Pizzafiyat)   
+        print(f"{self.Pizzaisim} Pizzası Fiyatı : {self.Pizzafiyat}")   
         
 class sos():
-    def __init__(self, isim, Sosfiyat):
+    def __init__(self, Sosisim, Sosfiyat):
         self.Sosfiyat = int(Sosfiyat)
-        self.isim=isim
+        self.Sosisim=Sosisim
     def Sosfiyatcheck(self):
-        print("Sos Fiyat : "+ self.Sosfiyat)
+        print(f"{self.Sosisim} Sosu Fiyatı : {self.Sosfiyat} ")
         
 class TurkPizza(pizza):
     def __init__(self):
         self.Pizzafiyat= "105"
-        
+        self.Pizzaisim="Türk"
 class MargarittaPizza(pizza):
     def __init__(self):
         self.Pizzafiyat= "100"
-        
+        self.Pizzaisim="Margeritta"
 class KlasikPizza(pizza):
     def __init__(self):
         self.Pizzafiyat = "110"
-        
+        self.Pizzaisim="Klasik"
 class SadePizza(pizza):
     def __init__(self):
         self.Pizzafiyat= "95"
+        self.Pizzaisim="Sade"
 
 class ZeytinSos(sos):
     def __init__(self):
         self.Sosfiyat= "10"
+        self.Sosisim="Zeytin"
 class SoganSos(sos):
     def __init__(self):
         self.Sosfiyat= "10"
+        self.Sosisim="Sogan"
 class MisirSos(sos):
     def __init__(self):
         self.Sosfiyat= "10"
+        self.Sosisim="Misir"
 class MantarSos(sos):
     def __init__(self):
         self.Sosfiyat= "15"
+        self.Sosisim="Mantar"
 class KeciPeynirSos(sos):
     def __init__(self):
         self.Sosfiyat= "15"
+        self.Sosisim="Keci Peyniri"
 class EtSos(sos):
     def __init__(self):
         self.Sosfiyat= "20"
+        self.Sosisim="Et"
 
 def main():        
     try:      
