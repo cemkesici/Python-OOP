@@ -2,14 +2,14 @@ class pizza():
     def __init__(self,Pizzafiyat,Pizzaisim):
         self.Pizzafiyat = int(Pizzafiyat)
         self.Pizzaisim=Pizzaisim
-    def Pizzafiyatcheck(self):
+    def Pizzacheck(self):
         print(f"{self.Pizzaisim} Pizzası Fiyatı : {self.Pizzafiyat}")   
         
 class sos():
     def __init__(self, Sosisim, Sosfiyat):
         self.Sosfiyat = int(Sosfiyat)
         self.Sosisim=Sosisim
-    def Sosfiyatcheck(self):
+    def Soscheck(self):
         print(f"{self.Sosisim} Sosu Fiyatı : {self.Sosfiyat} ")
         
 class TurkPizza(pizza):
@@ -65,38 +65,38 @@ def main():
                 tempTrue=False    
                 if secenek == 1:
                     pizza=KlasikPizza()
-                    pizza.Pizzafiyatcheck()
+                    pizza.Pizzacheck()
                 elif secenek == 2:
                     pizza=MargarittaPizza()
-                    pizza.Pizzafiyatcheck()
+                    pizza.Pizzacheck()
                 elif secenek == 3:
                     pizza=TurkPizza()
-                    pizza.Pizzafiyatcheck()
+                    pizza.Pizzacheck()
                 elif secenek == 4:
                     pizza=SadePizza()
-                    pizza.Pizzafiyatcheck()
+                    pizza.Pizzacheck()
                 else:
                     print("Hatalı Seçim Yaptınız!!!")   
                                         
                 SosSecenek=int(input("Sos İçin Seçim Yapınız:"))                
                 if SosSecenek==11:
                     sos=ZeytinSos()
-                    sos.Sosfiyatcheck()
+                    sos.Soscheck()
                 elif SosSecenek==12:
                     sos=MantarSos()
-                    sos.Sosfiyatcheck()              
+                    sos.Soscheck()              
                 elif SosSecenek==13:
                     sos=KeciPeynirSos()
-                    sos.Sosfiyatcheck()  
+                    sos.Soscheck()  
                 elif SosSecenek==14:
                     sos=EtSos()
-                    sos.Sosfiyatcheck()  
+                    sos.Soscheck()  
                 elif SosSecenek==15:
                     sos=SoganSos()
-                    sos.Sosfiyatcheck()
+                    sos.Soscheck()
                 elif SosSecenek==16:
                     sos=MisirSos()
-                    sos.Sosfiyatcheck()
+                    sos.Soscheck()
                 else:
                     print("Hatalı Seçim Yaptınız!!!")          
             elif secenek >=5:
