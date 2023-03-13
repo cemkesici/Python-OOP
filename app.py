@@ -1,52 +1,51 @@
 class pizza():
     def __init__(self,fiyat,isim):
-        self.fiyat = fiyat
+        self.fiyat = int(fiyat)
         self.isim=isim
-    def start(self):
-        print("Pizza is starting")         
+    def fiyatcheck(self):
+        print("Pizza Fiyat : "+self.fiyat)   
+        
 class sos():
-    def __init__(self):
-        pass
-    def start(self):
-        print("Sos is starting")
-    def fiyat(fiyat):
-        print("Sos Fiyat : "+ fiyat)
+    def __init__(self, isim, fiyat):
+        self.fiyat = int(fiyat)
+        self.isim=isim
+    def fiyat(self):
+        print("Sos Fiyat : "+ self.fiyat)
         
 class TurkPizza(pizza):
     def __init__(self):
-        fiyat= 105
-        super().__init__(fiyat)  
+        self.fiyat= "105"
+        
 class MargarittaPizza(pizza):
     def __init__(self):
-        fiyat= 100
-        super().__init__(fiyat)
+        self.fiyat= "100"
+        
 class KlasikPizza(pizza):
-    def __init__(self,fiyat):
-        self.fiyat = fiyat
-    def fiyatcheck(self):
-        print("Pizza Fiyat : "+self.fiyat)   
+    def __init__(self):
+        self.fiyat = "110"
+        
 class SadePizza(pizza):
     def __init__(self):
-        fiyat= 95
+        self.fiyat= "95"
 
 class ZeytinSos(sos):
     def __init__(self):
-        self.__fiyat= 10
+        self.fiyat= "10"
 class SoganSos(sos):
     def __init__(self):
-        self.__fiyat= 10
+        self.fiyat= "10"
 class MisirSos(sos):
     def __init__(self):
-        self.__fiyat= 10
+        self.fiyat= "10"
 class MantarSos(sos):
     def __init__(self):
-        self.__fiyat= 15
+        self.fiyat= "15"
 class KeciPeynirSos(sos):
     def __init__(self):
-        self.__fiyat= 15
+        self.fiyat= "15"
 class EtSos(sos):
     def __init__(self):
-        self.__fiyat= 20
+        self.fiyat= "20"
 
 def main():        
     try:      
@@ -56,20 +55,19 @@ def main():
         while tempTrue:
             secenek=int(input("Pizza Tabanı İçin Seçim Yapınız:"))
             if secenek >=1 and secenek<=4:
-                tempTrue=False    
+                #tempTrue=False    
                 if secenek == 1:
                     pizza=KlasikPizza()
-                    pizza.start()
-                    pizza.fiyatcheck(10)
+                    pizza.fiyatcheck()
                 elif secenek == 2:
                     pizza=MargarittaPizza()
-                    pizza.start()
+                    pizza.fiyatcheck()
                 elif secenek == 3:
                     pizza=TurkPizza()
-                    pizza.start()
+                    pizza.fiyatcheck()
                 elif secenek == 4:
                     pizza=SadePizza()
-                    pizza.start()
+                    pizza.fiyatcheck()
             elif secenek >=5:
                 print("Pizza Tabanı Türü Seçmelisiniz!!!")
                 tempTrue2=True
